@@ -1,10 +1,9 @@
+import csv
 import os
 import smtplib
 from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
-
-students = []
 
 
 @app.route("/")  # form to list ppl and register
@@ -14,6 +13,13 @@ def index():
 
 @app.route("/registrants")  # view
 def registrants():
+    file = open("registrants.csv", "rt")
+    reader = csv.reader(file)
+    students = []
+
+    for row in reader:
+        students.append(", ".join(row))
+    file.close()
     return render_template("registrants.html", students=students)
 
 
@@ -24,11 +30,17 @@ def register():
     email = request.form.get("email")
     if not name or not dorm or not email:
         return render_template("failure.html")
+    file = open("registrants.csv", "a")
+    writer = csv.writer(file)
+    writer.writerow((request.form["name"], request.form["dorm"], request.form["email"]))
+    file.close()
+    # send_email(email)
+    return redirect("registrants")
+
+
+def send_email(email):
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     password = os.getenv("EMAIL_PASS")
     server.login(email, password)
     server.sendmail(email, email, "You are registered")
-    students.append(f"{name} from {dorm} with {email}")
-    print(students)
-    return redirect("registrants")
