@@ -1,5 +1,6 @@
 import os
 import smtplib
+
 from flask import Flask, render_template, request, redirect
 from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
