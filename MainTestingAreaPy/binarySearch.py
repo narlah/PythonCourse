@@ -19,7 +19,7 @@ def binarySearch(arr, x):
         elif arr[mid] < x:
             l = mid + 1
 
-        # If x is smaller, ignore right half
+        # If x is smaller, ignore right halfh
         else:
             r = mid - 1
 
