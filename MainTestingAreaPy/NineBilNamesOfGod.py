@@ -16,7 +16,7 @@ def row(n):
 
 
 print("rows:")
-for x in range(1, 11): print ("%2d:" % x, row(x))
+for x in range(1, 11): print("%2d:" % x, row(x))
 
 print("\nsums:")
-for x in [23, 123, 1234, 12345]: print (x, cumu(x)[-1])
+for x in [23, 123, 1234, 12345]: print(x, cumu(x)[-1])
