@@ -42,8 +42,8 @@ le = Lecturer('eric')
 pe = Professor('eric')
 ae = ArrogantProfessor('eric')
 
-print pe.say('the sky is blue')
+print(pe.say('the sky is blue'))
 # Prof. eric says: I believe that eric says: the sky is blue
 
-print ae.say('the sky is blue')
+print(ae.say('the sky is blue'))
 # Prof. eric says: It is obvious that I believe that eric says: the sky is blue

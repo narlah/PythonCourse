@@ -1,9 +1,11 @@
 def gcdRecur(a, b):
     if b == 0:
         return a
-    return gcdRecur (b,a%b)
+    return gcdRecur(b, a % b)
 
-print gcdRecur(0,0)
+
+print
+gcdRecur(0, 0)
 
 # def gcdIter(a, b):
 #     divisor = a if a <= b else b

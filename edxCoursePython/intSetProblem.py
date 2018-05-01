@@ -38,9 +38,9 @@ class intSet(object):
         return res
 
     def len(s):
-        count =0
+        count = 0
         for e in s.vals:
-            count+=1
+            count += 1
         return count
 
 
@@ -48,10 +48,11 @@ a = intSet()
 a.insert(12)
 a.insert(14)
 a.insert(15)
+
 a.insert(1)
 b = intSet()
 b.insert(12)
 b.insert(1)
-print str(a.intersect(b).vals)
-print str(a.intersect(intSet()).vals)
-print intSet.len(a)
+print(str(a.intersect(b).vals))
+print(str(a.intersect(intSet()).vals))
+print(intSet.len(a))

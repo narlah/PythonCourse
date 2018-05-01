@@ -6,12 +6,12 @@ while num*(2**p)%1!=0:
 print (p)
 
 num = int(num*(2**p))
-print num
+print(num)
 
 while num >= 1:
     result = str(num % 2) + result
     num /= 2
-print result
+print(result)
 
 result = "."+(p-len(result))*"0" + result
-print "final :" + result
+print("final :" + result)

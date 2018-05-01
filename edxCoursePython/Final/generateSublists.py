@@ -8,4 +8,4 @@ def getSublists(L=[], n=1):
     return result
 
 
-print getSublists([5, 2, 4, 1, 3], 1)
+print(getSublists([5, 2, 4, 1, 3], 1))

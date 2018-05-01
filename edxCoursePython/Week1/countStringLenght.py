@@ -16,8 +16,9 @@ def semordnilap(str1, str2):
 def test():
     global count
     count =0
-    print semordnilap("semordnilap", "palindromes")
-    print count
+    print(semordnilap("semordnilap", "palindromes"))
+    print(count)
+
 
 test()
 

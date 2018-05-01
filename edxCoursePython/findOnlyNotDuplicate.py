@@ -2,4 +2,4 @@ a = [12, 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8,15,15, 123, 123, 654, 65
 res = 0
 for z in a:
     res =  z ^ res
-print res
+print(res)

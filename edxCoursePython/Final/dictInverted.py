@@ -15,6 +15,6 @@ def dict_invert(d=None):
     return result
 
 
-print dict_invert({1: 10, 2: 20, 3: 30, 4: 30})
-print dict_invert({4: True, 2: True, 0: True})
-print dict_invert({8: 6, 2: 6, 4: 6, 6: 6})
+print(dict_invert({1: 10, 2: 20, 3: 30, 4: 30}))
+print(dict_invert({4: True, 2: True, 0: True}))
+print(dict_invert({8: 6, 2: 6, 4: 6, 6: 6}))

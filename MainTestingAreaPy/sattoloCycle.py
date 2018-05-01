@@ -1,6 +1,6 @@
 from random import randrange
 
-from random import randrange
+
 # def sattoloCycle(items):
 #     for i in range(len(items) - 1, 0, -1):
 #         j = randrange(i)  # 0 <= j <= i-1
@@ -11,7 +11,7 @@ from random import randrange
 #     lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #     sattoloCycle(lst)
 #     print(lst)
-def sattoloCycle(items):
+def sattolo_cycle(items):
     for i in range(len(items) - 1, 1, -1):
         j = randrange(i - 1)  # 0 < j <= i-1
         # print(str(i) + " " + str(j) + " ----> " +str(items))
@@ -22,5 +22,5 @@ def sattoloCycle(items):
 # Tests
 lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for _ in range(10):
-    lst = sattoloCycle(lst)
+    lst = sattolo_cycle(lst)
     print(lst)

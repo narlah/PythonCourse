@@ -48,4 +48,4 @@ def determine_max(dictionary):
     return max
 
 
-print nfruits({'A': 1, 'B': 2, 'C': 3}, 'ACCA')
+print(nfruits({'A': 1, 'B': 2, 'C': 3}, 'ACCA'))

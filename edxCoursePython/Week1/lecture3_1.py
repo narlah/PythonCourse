@@ -10,6 +10,6 @@ while abs(guess**2-x) >= epsilon:
         break
 
 if abs(guess**2 - x) >= epsilon:
-    print 'failed'
+    print('failed')
 else:
-    print 'succeeded: ' + str(guess)
+    print('succeeded: ' + str(guess))

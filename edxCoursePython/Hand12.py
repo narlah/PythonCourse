@@ -98,13 +98,13 @@ class Hand(object):
 
 
 myHand = Hand(7)
-print myHand
-print myHand.calculateLen()
+print(myHand)
+print(myHand.calculateLen())
 
 myHand.setDummyHand('aazzmsp')
-print myHand
-print myHand.calculateLen()
-print "->" + str(myHand.hand)
+print(myHand)
+print(myHand.calculateLen())
+print("->" + str(myHand.hand))
 
 myHand.update('za')
-print myHand
+print(myHand)

@@ -24,6 +24,7 @@ def check_prime(number, primes):
             return False
     return True
 
+
 primes = genPrimes()
 for i in range(1501111):
-    print primes.next()
+    print(primes.next())
