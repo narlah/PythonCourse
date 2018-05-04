@@ -1,0 +1,19 @@
+class Solution:
+    def recGenerateParenthesis(self, n, currentResult, currently_opened, currently_closed, res):
+        if currently_closed == n & currently_opened == n:
+            res.append(currentResult)
+            return res
+        if currently_opened < n:
+            co = currentResult + "("
+            self.recGenerateParenthesis(n, co, currently_opened + 1, currently_closed, res)
+        if (currently_closed < n) & (currently_opened > currently_closed):
+            cc = currentResult + ")"
+            self.recGenerateParenthesis(n, cc, currently_opened, currently_closed + 1, res)
+        return res
+
+    def generateParenthesis(self, n):
+        return self.recGenerateParenthesis(n, "", 0, 0, [])
+
+
+sol = Solution()
+print(sol.recGenerateParenthesis(2, "", 0, 0, []))
