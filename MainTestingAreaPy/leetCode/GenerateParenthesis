@@ -16,4 +16,4 @@ class Solution:
 
 
 sol = Solution()
-print(sol.recGenerateParenthesis(2, "", 0, 0, []))
+print(sol.generateParenthesis(10))

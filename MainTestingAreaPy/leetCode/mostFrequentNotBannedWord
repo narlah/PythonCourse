@@ -1,0 +1,16 @@
+import string, operator
+class Solution:
+    def mostCommonWord(self, paragraph, banned):
+        dic = {}
+        paragraph = ''.join(c for c in paragraph if c not in string.punctuation)
+        for word in paragraph.lower().split(' '):
+            if word not in banned:
+                if word in dic:
+                    dic[word] = dic[word] + 1
+                else:
+                    dic[word] = 1
+        return sorted(dic.items(), key=operator.itemgetter(1))[-1][0]
+
+
+sol = Solution()
+print(sol.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", ["hit"]))
