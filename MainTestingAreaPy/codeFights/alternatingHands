@@ -1,0 +1,44 @@
+def alternatingKeys(text):
+    leftSymbols = "qwertasdfgzxcvbQWERTASDFGZXCVB";
+    counter = 0
+    x = 0
+    leftHand = 0
+    firstLetterPass = False
+    for z in text:
+        if z != ' ':
+            leftHand = False if z in leftSymbols else True
+            break
+    while x < len(text):
+        # intervals
+        letter = text[x]
+        if letter == " ":
+            intervals = 0
+            while (x + intervals) < len(text) and text[x + intervals] == ' ':
+                intervals += 1
+            counter += 50 * intervals
+            leftHand = not leftHand if firstLetterPass and intervals % 2 != 0 else leftHand
+            x = x + intervals - 1
+            # rest
+        elif letter in leftSymbols:
+            firstLetterPass = True
+            if leftHand:  # right hand been used just before
+                counter += 75
+            else:
+                leftHand = True
+                counter += 50
+        else:  # "YUIOPHJKLNM"
+            firstLetterPass = True
+            if leftHand:  # just left
+                counter += 50
+                leftHand = False
+            else:
+                counter += 75
+        x += 1
+    return counter
+
+print(alternatingKeys("   a a"))
+#print(alternatingKeys("  a  b")) #325
+#print(alternatingKeys("nice job")) #500
+#print(alternatingKeys("a    ao  o")) #250left + 125 + 100+75
+#print(alternatingKeys("a  a "))
+#print(alternatingKeys("this string is a bit longer so it should probably take a longer time to type out maybe"))  # 5075
