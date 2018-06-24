@@ -1,0 +1,22 @@
+from itertools import permutations, product
+
+
+# copied from a solution for a challenge, did not know about itertools, there is java alternatives btw
+def int237(A):
+    ''' 237?
+        237??
+        2-2-37!
+    '''
+    count = 0
+    for x in permutations([str(x) + '.0' for x in A]):
+        for y in product('+-*/', repeat=4):
+
+            try:
+                z = eval(''.join(sum(zip(x, y + (' ',)), ())))
+                count += abs(z - 237) < 1e-5
+            except:
+                0
+    return count
+
+
+print(int237([79, 0, 1, 3, 5]))
