@@ -1,0 +1,11 @@
+l = [('abc', 10), ('def', 15), ('ghi', 10), ('abc', 12), ('xyz', 100)]
+diction = {}
+for (i, j) in l:
+    if i in diction:
+        diction[i] = diction[i] + j
+    else:
+        diction[i] = j
+sorted_list = list(diction.items())
+sorted_list = sorted(sorted_list, key=lambda x: x[1], reverse=True)
+
+print(sorted_list[:10])
